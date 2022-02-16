@@ -1,8 +1,8 @@
 # JobBoard - Howdy!
 
-##A platform where professionals and hobbyist can create job/project posting. 
+## A platform where professionals and hobbyist can create job/project posting. 
 
-##User Stories
+## User Stories
 ### Login
 - users are able to login 
 - Database validates email
