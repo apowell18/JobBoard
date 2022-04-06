@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<!--https://www.youtube.com/watch?v=QnDWIZuWYW0&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=2-->
+    {% for post in bPosts %}
+    <div class="container">
+        <h1>{{post.job_title}} </h1>
+        <p> Posted by {{post.company_name}} on {{ post.date_posted}} </p>
+        <h3>Job Details</h3>
+        <div>
+            <p>Location: {{post.job_location}}</p>
+            <p>Compensation: {{post.salary}}</p>
+            <p>Job Type: {{post.job_type}}</p>
+            <h3>Job Description</h3>
+            <p>{{post.job_description}}</p>
+            <h3>Job Qualifications</h3>
+            <p>{{post.job_qualifications}}</p>
+            <h3>Contact</h3>
+            <p>{{post.contact}}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content%}
