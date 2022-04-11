@@ -1,7 +1,7 @@
 from flask import Flask, render_template
-
+from forms import RegisterJobSeekerForm,LoginForm, RegisterCompanyForm
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'a8302621bd11d012ab09fe863f4cb347'
 #create dictionary
 buisnessPosts = [
     {
@@ -27,11 +27,22 @@ def about():
 
 @app.route("/login")
 def login():
-    return render_template("login.html", title='Login')
+    form = LoginForm()
+    return render_template("login.html", title='Login',form=form)
 
-@app.route("/signup")
-def signUp():
-    return render_template("signup.html", title='Registeration')
+@app.route("/signupCompany")
+def signUpCompany():
+    form = RegisterCompanyForm()
+    return render_template("Company/signupCompany.html", title='Registeration',form=form)
+
+@app.route("/signupUser")
+def signupUser():
+    form = RegisterJobSeekerForm()
+    return render_template("JobSeeker/signupUser.html", title='Registeration',form=form)
+
+
+
+
 
 @app.route("/createboard")
 def createBoard():

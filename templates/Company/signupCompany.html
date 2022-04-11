@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+        .grad-background{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, teal, white)
+        }
+
+        .container-sizing{
+            max-width: 700px;
+            width: 100%;
+            padding: 25px 30px;
+            justify-content: center;
+            background: #fff;
+            border-radius: 15px 50px;
+        }
+    </style>
+
+    <div class="grad-background">
+    <div class="container-sizing">
+        <form method="POST" action="">
+            {{ form.hidden_tag()}}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+{% endblock content%}

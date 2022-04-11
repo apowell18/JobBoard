@@ -14,6 +14,21 @@
 </head>
 
 <body>
+<!--Integrate Google Translate-->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
+        cb=googleTranslateElementInit"></script>
+
+<!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Job Board</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +70,7 @@
 
   </div>
 </nav>
+
     {% block content%}
     {% endblock %}
 
